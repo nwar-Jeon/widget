@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".DatePicker">
+        </activity>
+        <activity android:name=".DatePickerSpinner">
+        </activity>
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.nwar.individual.widget
 
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.graphics.Color
 import android.graphics.PorterDuff
@@ -11,12 +12,31 @@ import com.nwar.individual.widget.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
+    val intentArray = ArrayList<Intent>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
+        setAsyncTask(binding)
+        setSeekBar(binding)
+        setSpinnerButton(binding)
+    }
+
+    fun setSpinnerButton(binding: ActivityMainBinding){
+        intentArray.add(Intent(this,DatePicker::class.java))
+        intentArray.add(Intent(this,DatePickerSpinner::class.java))
+        binding.btnButton.setOnClickListener {
+            startActivity(intentArray.get(binding.spinner.selectedItemPosition))
+        }
+    }
+
+    fun setAsyncTask(binding: ActivityMainBinding){
         val asyncTask = CustomAsyncTask(binding)
         asyncTask.execute()
+    }
+
+    fun setSeekBar( binding: ActivityMainBinding){
+
         binding.seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 binding.textView.text = progress.toString() + "%"
@@ -28,10 +48,6 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(seekBar: SeekBar?) {
             }
         })
-
-        /*binding.switch1.setOnCheckedChangeListener{
-            buttonView, isChecked ->
-        }*/
     }
 
 
