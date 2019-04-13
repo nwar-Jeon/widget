@@ -2,13 +2,12 @@
 <layout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:card="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        xmlns:tools="http://schemas.android.com/tools">
     <android.support.v7.widget.CardView
             card:cardCornerRadius="10dp"
             card:cardElevation="8dp"
             card:contentPadding="10dp"
+            android:layout_marginBottom="8dp"
             android:layout_height="100dp"
             android:layout_width="match_parent">
     <android.support.constraint.ConstraintLayout

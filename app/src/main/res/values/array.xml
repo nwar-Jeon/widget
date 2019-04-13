@@ -3,7 +3,6 @@
     <string-array name="arrayItem">
         <item>캘린더</item>
         <item>캘린더스피너</item>
-        <item>2</item>
-        <item>3</item>
+        <item>리사이클러뷰</item>
     </string-array>
 </resources>

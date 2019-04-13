@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
     fun setSpinnerButton(binding: ActivityMainBinding){
         intentArray.add(Intent(this,DatePicker::class.java))
         intentArray.add(Intent(this,DatePickerSpinner::class.java))
+        intentArray.add(Intent(this,RecyclerViewActivity::class.java))
         binding.btnButton.setOnClickListener {
             startActivity(intentArray.get(binding.spinner.selectedItemPosition))
         }
