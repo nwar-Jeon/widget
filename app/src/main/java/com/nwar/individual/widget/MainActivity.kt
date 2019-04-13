@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         setAsyncTask(binding)
         setSeekBar(binding)
         setSpinnerButton(binding)
+        setSupportActionBar(binding.toolbar)
     }
 
     fun setSpinnerButton(binding: ActivityMainBinding){
