@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         intentArray.add(Intent(this,RecyclerViewActivity::class.java))
         intentArray.add(Intent(this,FragmentActivity::class.java))
         intentArray.add(Intent(this,InfoActivity::class.java))
+        intentArray.add(Intent(this,IntentActivity::class.java))
         binding.btnButton.setOnClickListener {
             startActivity(intentArray.get(binding.spinner.selectedItemPosition))
         }

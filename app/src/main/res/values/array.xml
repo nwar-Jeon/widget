@@ -6,5 +6,6 @@
         <item>리사이클러뷰</item>
         <item>프래그먼트</item>
         <item>알림</item>
+        <item>인텐트</item>
     </string-array>
 </resources>
