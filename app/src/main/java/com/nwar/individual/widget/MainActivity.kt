@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
         intentArray.add(Intent(this,DatePicker::class.java))
         intentArray.add(Intent(this,DatePickerSpinner::class.java))
         intentArray.add(Intent(this,RecyclerViewActivity::class.java))
+        intentArray.add(Intent(this,FragmentActivity::class.java))
+        intentArray.add(Intent(this,InfoActivity::class.java))
         binding.btnButton.setOnClickListener {
             startActivity(intentArray.get(binding.spinner.selectedItemPosition))
         }

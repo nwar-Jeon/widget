@@ -4,5 +4,7 @@
         <item>캘린더</item>
         <item>캘린더스피너</item>
         <item>리사이클러뷰</item>
+        <item>프래그먼트</item>
+        <item>알림</item>
     </string-array>
 </resources>
